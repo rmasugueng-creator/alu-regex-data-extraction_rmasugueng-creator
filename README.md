@@ -13,7 +13,17 @@ The program extracts:
 
 ## Project structure
 
-...
+## Project structure
+
+```text
+alu-regex-data-extraction_YourGithubUsername/
+├── input/
+│   └── raw-text.txt              # Raw text used as input
+├── src/
+│   └── main.py                   # Regex extraction and validation logic
+├── output/
+│   └── sample-output.json        # Example of the program output
+└── README.md                     # Project documentation
 
 ## Requirements
 Python 3.x
