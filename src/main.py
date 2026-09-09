@@ -12,6 +12,20 @@ URL_PATTERN = r"https?://(?:www\.)?[A-Za-z0-9.-]+\.[A-Za-z]{2,}(?:/[^\s]*)?"
 
 CREDIT_CARD_PATTERN = r"\b(?:\d{4}[- ]?){3}\d{4}\b"
 
+def classify_alu_email(email):
+    domain = email.rsplit("@", 1)[1].lower()
+
+    if domain == "alueducation.com":
+        return "ALU official"
+
+    elif domain == "alumni.alueducation.com":
+        return "ALU alumni"
+
+    elif domain == "si.alueducation.com":
+        return "ALU SI"
+
+    else:
+        return "Other"
 
 def main():
     with open(INPUT_FILE, "r", encoding="utf-8") as file:
